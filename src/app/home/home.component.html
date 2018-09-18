@@ -1,3 +1,16 @@
-<p>
-  home works!
-</p>
+<div class="container">
+  <div class="logo block">
+    <h6>A Simple WYSIWYG Editor for Angular5+ Applications.</h6>
+  </div>
+
+  <div class="editor block">
+    <app-ngx-editor [config]="editorConfig" [spellcheck]="true" [(ngModel)]="htmlContent"></app-ngx-editor>
+  </div>
+
+  <div *ngIf="htmlContent" class="htmlblock block">
+    <h6>HTML Output</h6>
+    <div class="html">
+      {{ htmlContent }}
+    </div>
+  </div>
+</div>

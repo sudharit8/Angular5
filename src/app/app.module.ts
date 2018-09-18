@@ -5,6 +5,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { MatButtonModule, MatCardModule, MatInputModule, MatSnackBarModule, MatToolbarModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { EqualValidatorDirective } from './shared/equal.validator.directive';
+import { NgxEditorModule } from 'ngx-editor';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { HttpClientModule } from '@angular/common/http';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -33,8 +37,8 @@ const myRoots: Routes = [
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule, FormsModule, ReactiveFormsModule,
-    MatButtonModule, MatCardModule, MatInputModule, MatSnackBarModule, MatToolbarModule,
-    RouterModule.forRoot(myRoots)
+    MatButtonModule, MatCardModule, MatInputModule, MatSnackBarModule, MatToolbarModule,NgxEditorModule,
+    RouterModule.forRoot(myRoots),TooltipModule.forRoot(), HttpClientModule,AngularFontAwesomeModule
   ],
   providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
